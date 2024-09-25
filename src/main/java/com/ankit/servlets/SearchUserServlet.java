@@ -30,7 +30,7 @@ public class SearchUserServlet extends HttpServlet {
                 RequestDispatcher rd = req.getRequestDispatcher("ViewUserDetails.html");
                 rd.include(req, res);
 
-                pw.println("<div class='main'><p1 class='menu'>User Details</p1></div>");
+                pw.println("<div class='tab'>User Details</div>");
                 pw.println("<div class='tab'><table><tr><th>Email Id</th><th>First Name</th><th>Last Name</th><th>Address</th><th>Phone No</th></tr>");
                 pw.println("<tr>" +
                            "<td>" + user.getMailId() + "</td>" +
@@ -41,10 +41,14 @@ public class SearchUserServlet extends HttpServlet {
                            "</tr>");
                 pw.println("</table></div>");
             } catch (TrainException e) {
-                pw.println("<div class='main'><p1 class='menu red'>User not found</p1></div>");
+            	RequestDispatcher rd = req.getRequestDispatcher("AdminSearchUser.html");
+                rd.include(req, res);
+                pw.println("<div class='tab red'>User not found</div>");
             }
         } else {
-            pw.println("<div class='main'><p1 class='menu red'>Invalid Email ID</p1></div>");
+        	RequestDispatcher rd = req.getRequestDispatcher("AdminSearchUser.html");
+            rd.include(req, res);
+            pw.println("<div class='tab red'>Invalid Email ID</div>");
         }
     }
 }

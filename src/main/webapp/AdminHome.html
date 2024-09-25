@@ -3,65 +3,67 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>E-Trains</title>
-<link rel="stylesheet" href="UserHome_Css.css">
+<link rel="stylesheet" href="all.css">
+<style>.menu:hover {
+             background-color:red !important;
+             color: white !important;
+}
+</style>
 </head>
 <body>
 	<header>
-		<h1 class="hd">National Ticket Booking Spot</h1>
+		<h1 class="hd">Railway Ticket Booking Spot</h1>
 		<div class="home">
-			<p class="menu">
-				<a href="AdminHome.html">Home</a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="adminviewtrainfwd">View Trains</a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="adminsearchtrainfwd">Search By TrainNo</a>
-			</p>
-		</div>
-		
-		<div class="home">
-			<p class="menu">
-				<a href="adminviewuserfwd">View User</a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="adminsearchuserfwd">Search User by Email id</a>
-			</p>
-		</div>
-
-		<div class="home">
-			<p class="menu">
-				<a href="addtrainfwd">Add Train</a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="cancletrainfwd">Delete Train </a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="updatetrain">Update Train Details</a>
-			</p>
-		</div>
-		<div class="home">
-			<p class="menu">
-				<a href="adminlogout">Logout</a>
-			</p>
-		</div>
+            <p class="menu" id="home">
+                <a href="adminhome">Home</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu" id="viewTrains">
+                <a href="adminviewtrainfwd">View Trains</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu" id="searchTrain">
+                <a href="adminsearchtrainfwd">Search By TrainNo</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu" id="viewUser">
+                <a href="adminviewuserfwd">View User</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu" id="searchUser">
+                <a href="adminsearchuserfwd">Search User by Email id</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu" id="addTrain">
+                <a href="addtrainfwd">Add Train</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu" id="deleteTrain">
+                <a href="cancletrainfwd">Delete Train</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu" id="updateTrain">
+                <a href="updatetrain">Update Train Details</a>
+            </p>
+        </div>
+        <div class="home">
+            <p class="menu" id="logout">
+                <a href="adminlogout">Logout</a>
+            </p>
+        </div>
 	</header>
+	<!--  <div class='tab'>Home</div>
+	<div class='tab'>Hey, Admin ! Welcome to our new NITRTC Website</div>
 	
-	<div class='tab'>
-		<p class='menu'> Hey, Admin ! Welcome to our new NITRTC Website
-		</p>
-	</div>
+	-->
 
-
+<script src="app.js"></script>
 </body>
 </html>

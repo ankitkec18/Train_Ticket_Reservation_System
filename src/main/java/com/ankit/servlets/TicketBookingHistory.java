@@ -31,7 +31,7 @@ public class TicketBookingHistory extends HttpServlet {
 			if (details != null && !details.isEmpty()) {
 				RequestDispatcher rd = req.getRequestDispatcher("UserViewTrains.html");
 				rd.include(req, res);
-				pw.println("<div class='main'><p1 class='menu'>Booked Ticket History</p1></div>");
+				pw.println("<div class='tab1'>Booked Ticket History</div>");
 				pw.println("<div class='tab'><table><tr><th>Transaction ID</th><th>Train Number</th>"
 						+ "<th>From Station</th><th>To Station</th><th>Journey Date</th><th>Seat</th><th>Amount Paid</th></tr>");
 
@@ -46,7 +46,7 @@ public class TicketBookingHistory extends HttpServlet {
 			} else {
 				RequestDispatcher rd = req.getRequestDispatcher("UserViewTrains.html");
 				rd.include(req, res);
-				pw.println("<div class='main'><p1 class='menu red'> No any ticket booked, book your first ticket now!!</p1></div>");
+				pw.println("<div class='tab1'> No any ticket booked, book your first ticket now!!</div>");
 			}
 		} catch (Exception e) {
 			throw new TrainException(422, this.getClass().getName() + "_FAILED", e.getMessage());

@@ -31,7 +31,7 @@ public class AdminLogin extends HttpServlet {
 
                 RequestDispatcher rd = req.getRequestDispatcher("AdminHome.html");
                 rd.include(req, res);
-                pw.println("<div class='main'><p1 class='menu'>Hello, " + uName + " ! Welcome </p1></div>");
+                pw.println("<div class='tab1'>Hello, " + uName + " ! Welcome</div>");
                 pw.println("<div class='tab'>Hi ! Here You can Manage Train Information as per Your Requirement</div>");
 
             } else {

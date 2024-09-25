@@ -26,8 +26,9 @@ public class UserLoginServlet extends HttpServlet {
 		if (ResponseCode.SUCCESS.toString().equalsIgnoreCase(responseMsg)) {
 			RequestDispatcher rd = req.getRequestDispatcher("UserHome.html");
 			rd.include(req, res);
-			pw.println("<div class='main'><p1 class='menu'>Hello " + uName
-					+ " ! Welcome to our new NITRTC Website</p1></div>");
+			pw.println("<div class='tab1'>Hello " + uName
+					+ " ! Welcome to our new NITRTC Website</div>");
+			
 			pw.println("<div class='tab'>Hello " + uName
 					+ " ! Good to See You here.<br/> Here you can Check up the train "
 					+ "details and train schedule,fare Enquiry and many more information.<br/>Just go to the Side Menu Links and "

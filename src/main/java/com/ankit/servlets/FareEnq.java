@@ -33,8 +33,8 @@ public class FareEnq extends HttpServlet {
 			if (trains != null && !trains.isEmpty()) {
 				RequestDispatcher rd = req.getRequestDispatcher("UserHome.html");
 				rd.include(req, res);
-				pw.println("<div class='main'><p1 class='menu'>Fare for Trains BetWeen Station " + fromStation + " and "
-						+ toStation + " is as below</p1></div>");
+				pw.println("<div class='tab green'>Fare for Trains BetWeen Station " + fromStation + " and "
+						+ toStation + " is as below</div>");
 				pw.println("<div class='tab'><table><tr><th>Train Name</th><th>Train No</th>"
 						+ "<th>From Stn</th><th>To Stn</th><th>Time</th><th>Seats</th><th>Fare (INR)</th><th>Action</th></tr>");
 				for (TrainBean train : trains) {
@@ -53,8 +53,8 @@ public class FareEnq extends HttpServlet {
 			} else {
 				RequestDispatcher rd = req.getRequestDispatcher("TrainBwStn.html");
 				rd.include(req, res);
-				pw.println("<div class='tab'><p1 class='menu'>There are no trains Between " + fromStation + " and "
-						+ toStation + "</p1></div>");
+				pw.println("<div class='tab red'>There are no trains Between " + fromStation + " and "
+						+ toStation + "</div>");
 			}
 		} catch (Exception e) {
 			throw new TrainException(422, this.getClass().getName() + "_FAILED", e.getMessage());

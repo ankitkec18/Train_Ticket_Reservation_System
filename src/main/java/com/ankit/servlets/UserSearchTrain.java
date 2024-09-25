@@ -31,7 +31,8 @@ public class UserSearchTrain extends HttpServlet {
 			if (train != null) {
 				RequestDispatcher rd = req.getRequestDispatcher("UserHome.html");
 				rd.include(req, res);
-				pw.println("<div class='main'><p1 class='menu'>Searched Train Detail</p1></div>");
+				pw.println("<div class='tab'>Searched Train Detail</div>");
+				
 				pw.println("<div class='tab'>" + "<table>" + "<tr><td class='blue'>Train Name :</td><td>"
 						+ train.getTr_name() + "</td></tr>" + "<tr><td class='blue'>Train Number :</td><td>"
 						+ train.getTr_no() + "</td></tr>" + "<tr><td class='blue'>From Station :</td><td>"
@@ -42,7 +43,7 @@ public class UserSearchTrain extends HttpServlet {
 			} else {
 				RequestDispatcher rd = req.getRequestDispatcher("SearchTrains.html");
 				rd.include(req, res);
-				pw.println("<div class='tab'><p1 class='menu'>Train No." + trainNo + " is Not Available !</p1></div>");
+				pw.println("<div class='tab'>Train No." + trainNo + " is Not Available !</div>");
 			}
 		} catch (Exception e) {
 			throw new TrainException(422, this.getClass().getName() + "_FAILED", e.getMessage());

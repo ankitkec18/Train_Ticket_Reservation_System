@@ -30,11 +30,11 @@ public class UserAvailServlet extends HttpServlet {
 			if (train != null) {
 				RequestDispatcher rd = req.getRequestDispatcher("UserHome.html");
 				rd.include(req, res);
-				pw.println(
-						"<div class='tab'>" + "		<p1 class='menu'>" + "	Hello " + TrainUtil.getCurrentUserName(req)
-								+ " ! Welcome to our new NITRTC Website" + "		</p1>" + "	</div>");
-				pw.println("<div class='main'><p1 class='menu'>Available Seats are <p2 class=\"red\"> "
-						+ train.getSeats() + " Seats</p2></p1></div>");
+				
+				
+				pw.println("<div class='tab green'>Available Seats are <p2 class=\"red\"> "
+						+ train.getSeats() + " Seats</p2></div>");
+				
 				pw.println("<div class='tab'>" + "<table>" + "<tr><td class='blue'>Train Name :</td><td>"
 						+ train.getTr_name() + "</td></tr>" + "<tr><td class='blue'>Train Number :</td><td>"
 						+ train.getTr_no() + "</td></tr>" + "<tr><td class='blue'>From Station :</td><td>"

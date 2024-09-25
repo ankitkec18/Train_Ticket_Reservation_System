@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Ticket Booking Spot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .marquee {
+            background-color: #28a745;
+            color: white;
+            font-weight: bold;
+            padding: 10px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Adjust for marquee height */
+            flex-direction: column;
+            background-image: url(WAG.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .heading {
+            font-size: 48px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color : #1a253f;
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #7081b9;
+            transform: scale(1.1);
+        }
+        
+        
+    </style>
+</head>
+<body>
+   <!--  <div class="marquee">
+        <div class="marquee-content">
+            🚆 Train 1: Departure 10:00 AM | 🚆 Train 2: Departure 11:30 AM | 🚆 Train 3: Departure 1:00 PM | 🚆 Train 4: Departure 3:15 PM
+        </div>
+    </div>
+    
+    -->
+    
+    <div class="container">
+        <h1 class="heading">Railway Ticket Booking Spot</h1>
+        <a href="UserLogin.html" class="button">Book Ticket Now</a>
+    </div>
+</body>
+</html>
+
+

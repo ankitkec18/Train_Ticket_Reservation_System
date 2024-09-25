@@ -21,12 +21,13 @@ public class ViewUserProfile extends HttpServlet {
 		UserBean ub = TrainUtil.getCurrentCustomer(req);
 		RequestDispatcher rd = req.getRequestDispatcher("UserHome.html");
 		rd.include(req, res);
-		pw.println("<div class='tab'>" + "		<p1 class='menu'>" + "	Hello " + TrainUtil.getCurrentUserName(req)
-				+ " ! Welcome to our new NITRTC Website" + "		</p1>" + "	</div>");
+		
+		
 		pw.println("<div class='main'><p1 class='menu'><a href='viewuserprofile'>View Profile</a></p1>&nbsp;"
 				+ "<p1 class='menu'><a href='edituserprofile'>Edit Profile</a></p1>&nbsp;"
 				+ "<p1 class='menu'><a href='changeuserpassword'>Change Password</a></p1>" + "</div>");
-		pw.println("<div class='tab'>Users Profile View</div>");
+		
+		pw.println("<div class='tab1'>Users Profile View</div>");
 		pw.println("<div class='tab'>" + "<table>" + "<tr><td>Profile Photo :</td><td>Not Available</td></tr>"
 				+ "<tr><td>User Name :</td><td>" + ub.getMailId() + "</td></tr>"
 				+ "<tr><td>Password :</td><td><input type='password' disabled value='" + ub.getPWord() + "'/></td></tr>"

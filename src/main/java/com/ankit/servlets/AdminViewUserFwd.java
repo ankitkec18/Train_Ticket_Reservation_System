@@ -28,7 +28,7 @@ public class AdminViewUserFwd extends HttpServlet {
             if (users != null && !users.isEmpty()) {
                 RequestDispatcher rd = req.getRequestDispatcher("ViewUsers.html");
                 rd.include(req, res);
-                pw.println("<div class='main'><p1 class='menu'>Registered Users</p1></div>");
+                pw.println("<div class='tab1'>Registered Users</div>");
                 pw.println("<div class='tab'><table><tr><th>Email Id</th><th>First Name</th><th>Last Name</th><th>Address</th><th>Phone No</th></tr>");
 
                 for (UserBean user : users) {

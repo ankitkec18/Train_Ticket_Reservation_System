@@ -1,33 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>LOGIN</title>
-<link rel="stylesheet" href="UserHome_Css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - National Ticket Booking Spot</title>
+    <link rel="stylesheet" href="UserHome_Css.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .hd {
+            color: #cc0066;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .main {
+            margin-bottom: 20px;
+            background-color:#7081b9;
+        }
+
+        .menu {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #1a253f;
+            font-weight: bold;
+            padding: 10px 15px;
+            border: 2px solid transparent;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .menu:hover{
+         background-color: #1a253f;
+        }
+
+        .menu a:hover {
+           
+            color: white;
+          
+        }
+
+        .tab {
+            background-color: #7081b9;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            width: 300px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+        .tab:hover{
+           background-color:white;
+           border-radius:0px;
+        }
+
+        .green {
+            border: 1px solid green;
+        }
+
+        .brown {
+            border: 1px solid brown;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #1a253f;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #8997bd;
+        }
+    </style>
 </head>
 <body>
-	<header>
-		<h1 class="hd">National Ticket Booking Spot</h1>
-		<div class="main">
-			<span class="menu">
-				<a href="UserLogin.html">Login as User</a>
-			</span>
-			<span class="menu">
-				<a href="UserRegister.html">New User Register</a>
-			</span>
-			<span class="menu">
-				<a href="AdminLogin.html">Login as Admin</a>
-			</span>
-		</div>
-	</header>
-	<div class="tab green">User Login</div>
-	<form action="userlogin" class="tab brown" method="post">
-		<br /> UserName: <input type="text" name="uname"
-			placeholder="Enter Your EmailId"> <br /> <br /> Password: <input
-			type="password" name="pword"> <br /> <br /> <input
-			type="submit" value=" LOGIN "><br />
-
-	</form>
-	<br />
+    <header>
+        <h1 class="hd">Railway Ticket Booking Spot</h1>
+        <div class="main">
+            <span class="menu">
+                <a href="UserLogin.html">Login as User</a>
+            </span>
+            <span class="menu">
+                <a href="UserRegister.html">New User Register</a>
+            </span>
+            <span class="menu">
+                <a href="AdminLogin.html">Login as Admin</a>
+            </span>
+        </div>
+    </header>
+    <div class="tab green">User Login</div>
+    <form action="userlogin" class="tab brown" method="post">
+        <label for="uname">UserName:</label>
+        <input type="text" name="uname" id="uname" placeholder="Enter Your EmailId" required>
+        <label for="pword">Password:</label>
+        <input type="password" name="pword" id="pword" required>
+        <input type="submit" value="LOGIN">
+    </form>
 </body>
 </html>

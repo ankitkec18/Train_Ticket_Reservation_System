@@ -35,7 +35,8 @@ public class AdminSearchTrain extends HttpServlet {
 			if (train != null) {
 				RequestDispatcher rd = req.getRequestDispatcher("AdminSearchTrain.html");
 				rd.include(req, res);
-				pw.println("<div class='main'><p1 class='menu'>Searched Train Detail</p1></div>");
+				pw.println("<div class='tab'>Searched Train Detail</div>");
+				
 				pw.println("<div class='tab'>" + "<table>" + "<tr><td class='blue'>Train Name :</td><td>"
 						+ train.getTr_name() + "</td></tr>" + "<tr><td class='blue'>Train Number :</td><td>"
 						+ train.getTr_no() + "</td></tr>" + "<tr><td class='blue'>From Station :</td><td>"
